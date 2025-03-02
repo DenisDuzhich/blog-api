@@ -8,7 +8,7 @@ export class PostsService {
   constructor(private prisma: PrismaService) {}
 
   create(createPostDto: CreatePostDto) {
-    return 'This action adds a new post';
+    return this.prisma.post.create({ data: createPostDto });
   }
 
   findAll() {
