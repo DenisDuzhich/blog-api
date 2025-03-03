@@ -15,8 +15,10 @@ async function bootstrap() {
     .setTitle('Blog API')
     .setDescription('REST API project')
     .setVersion('0.1')
+    .addTag('V1/Auth')
     .addTag('V1/Users')
     .addTag('V1/Posts')
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
